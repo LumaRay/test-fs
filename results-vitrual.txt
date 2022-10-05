@@ -1,0 +1,351 @@
+#define DIR_STRUCT_SIZE_NO			0
+
+Generating files data, 32768 files of 16384 bytes... Done
+CreateWriteFiles 647ms (19us/file, 50...20us) 
+Space free: 90957.8 Mb
+Space used: 512.0 Mb
+AccessFiles 70ms (2us/file, 2...4us) 
+ReadFiles 208ms (6us/file, 13...7us) 
+DeleteFiles 336ms (10us/file, 16...11us)
+
+Generating files data, 65536 files of 16384 bytes... Done
+CreateFiles 1407ms (21us/file) 
+Space free: 91052.7 Mb
+Space used: 1024.0 Mb
+AccessFiles 145ms (2us/file) 
+ReadFiles 407ms (6us/file) 
+DeleteFiles 762ms (11us/file) 
+
+Generating files data, 65536 files of 8192 bytes... Done
+CreateWriteFiles 982ms (14us/file, 25...16us) 
+Space free: 90954.5 Mb
+Space used: 512.0 Mb
+AccessFiles 141ms (2us/file, 2...3us) 
+ReadFiles 334ms (5us/file, 19...7us) 
+DeleteFiles 604ms (9us/file, 16...10us)
+
+Generating files data, 131072 files of 8192 bytes... Done
+CreateFiles 2117ms (16us/file) 
+Space free: 91052.7 Mb
+Space used: 1024.0 Mb
+AccessFiles 279ms (2us/file) 
+ReadFiles 640ms (4us/file) 
+DeleteFiles 1414ms (10us/file) 
+
+Generating files data, 131072 files of 4096 bytes... Done
+CreateWriteFiles 1618ms (12us/file, 21...13us) 
+Space free: 90948.0 Mb
+Space used: 512.0 Mb
+AccessFiles 276ms (2us/file, 3...3us) 
+ReadFiles 578ms (4us/file, 9...5us) 
+DeleteFiles 1075ms (8us/file, 23...9us)
+
+Generating files data, 262144 files of 4096 bytes... Done
+CreateFiles 3535ms (13us/file) 
+Space free: 91039.5 Mb
+Space used: 1024.0 Mb
+AccessFiles 556ms (2us/file) 
+ReadFiles 1138ms (4us/file) 
+DeleteFiles 2582ms (9us/file) 
+
+Generating files data, 262144 files of 2048 bytes... Done
+CreateWriteFiles 3427ms (13us/file, 40...14us) 
+Space free: 90934.7 Mb
+Space used: 1024.0 Mb
+AccessFiles 566ms (2us/file, 3...4us) 
+ReadFiles 1143ms (4us/file, 9...6us) 
+DeleteFiles 2499ms (9us/file, 22...9us)
+
+Generating files data, 524288 files of 2048 bytes... Done
+CreateFiles 7504ms (14us/file) 
+Space free: 91013.3 Mb
+Space used: 2048.0 Mb
+AccessFiles 1103ms (2us/file) 
+ReadFiles 2437ms (4us/file) 
+DeleteFiles 6214ms (11us/file) 
+
+Generating files data, 524288 files of 1024 bytes... Done
+CreateWriteFiles 7793ms (14us/file, 16...16us) 
+Space free: 90908.5 Mb
+Space used: 2048.0 Mb
+AccessFiles 1091ms (2us/file, 3...3us) 
+ReadFiles 2442ms (4us/file, 19...5us) 
+DeleteFiles 6224ms (11us/file, 41...10us)
+
+Generating files data, 1048576 files of 1024 bytes... Done
+CreateFiles 19210ms (18us/file) 
+Space free: 90961.0 Mb
+Space used: 4096.0 Mb
+AccessFiles 2234ms (2us/file) 
+ReadFiles 75257ms (71us/file) 
+DeleteFiles 13611ms (12us/file)
+
+Generating files data, 1048576 files of 1024 bytes... Done
+CreateWriteFiles 19529ms (18us/file, 21...65us) 
+Space free: 90960.8 Mb
+Space used: 4096.0 Mb
+AccessFiles 2362ms (2us/file, 3...3us) 
+ReadFiles 77327ms (73us/file, 66...68us) 
+DeleteFiles 14144ms (13us/file, 19...12us)  
+
+Generating files data, 1048576 files of 512 bytes... Done
+CreateWriteFiles 18020ms (17us/file, 24...19us) 
+Space free: 90855.8 Mb
+Space used: 4096.0 Mb
+AccessFiles 2188ms (2us/file, 4...3us) 
+ReadFiles 4932ms (4us/file, 35...5us) 
+DeleteFiles 14322ms (13us/file, 17...10us) 
+
+Generating files data, 1048576 files of 512 bytes... Done
+CreateWriteFiles 18435ms (17us/file, 17...17us) 
+Space free: 90961.1 Mb
+Space used: 4201.3 Mb
+AccessFiles 2488ms (2us/file, 7...3us) 
+ReadFiles 71757ms (68us/file, 120...70us) 
+DeleteFiles 13516ms (12us/file, 17...11us) 
+
+Generating files data, 2097152 files of 512 bytes... Done
+CreateFiles 53692ms (25us/file) 
+Space free: 90855.7 Mb
+Space used: 8192.0 Mb
+AccessFiles 13658ms (6us/file) 
+ReadFiles 166151ms (79us/file) 
+DeleteFiles 45618ms (21us/file) 
+
+Generating files data, 2097152 files of 512 bytes... Done
+CreateWriteFiles 57546ms (27us/file, 17...43us) 
+Space free: 90855.6 Mb
+Space used: 8192.0 Mb
+AccessFiles 13351ms (6us/file, 5...8us) 
+ReadFiles 164823ms (78us/file, 70...64us) 
+DeleteFiles 45472ms (21us/file, 25...12us) 
+
+
+
+
+
+#define DIR_STRUCT_SIZE_X_Y			1
+
+Generating files data, 32768 files of 16384 bytes... Done
+CreateWriteFiles 739ms (22us/file, 25...21us) 
+Space free: 90960.0 Mb
+Space used: 515.7 Mb
+AccessFiles 73ms (2us/file, 3...3us) 
+ReadFiles 217ms (6us/file, 8...8us) 
+DeleteFiles 425ms (12us/file, 15...11us)
+
+Generating files data, 65536 files of 16384 bytes... Done
+CreateWriteFiles 1607ms (24us/file, 25...68us) 
+Space free: 91475.8 Mb
+Space used: 1032.0 Mb
+AccessFiles 165ms (2us/file, 4...5us) 
+ReadFiles 444ms (6us/file, 13...8us) 
+DeleteFiles 1048ms (15us/file, 19...11us) 
+
+Generating files data, 65536 files of 8192 bytes... Done
+CreateWriteFiles 1130ms (17us/file, 20...47us) 
+Space free: 90960.0 Mb
+Space used: 520.0 Mb
+AccessFiles 149ms (2us/file, 3...3us) 
+ReadFiles 377ms (5us/file, 9...7us) 
+DeleteFiles 778ms (11us/file, 14...13us) 
+
+Generating files data, 131072 files of 8192 bytes... Done
+CreateWriteFiles 2710ms (20us/file, 25...20us) 
+Space free: 91476.2 Mb
+Space used: 1038.7 Mb
+AccessFiles 314ms (2us/file, 4...3us) 
+ReadFiles 705ms (5us/file, 7...7us) 
+DeleteFiles 2051ms (15us/file, 28...13us)
+
+Generating files data, 131072 files of 4096 bytes... Done
+CreateWriteFiles 1981ms (15us/file, 35...14us) 
+Space free: 90960.0 Mb
+Space used: 526.6 Mb
+AccessFiles 297ms (2us/file, 3...4us) 
+ReadFiles 611ms (4us/file, 23...6us) 
+DeleteFiles 1413ms (10us/file, 13...9us) 
+
+Generating files data, 262144 files of 4096 bytes... Done
+CreateWriteFiles 4710ms (17us/file, 19...51us) 
+Space free: 91476.2 Mb
+Space used: 1051.8 Mb
+AccessFiles 648ms (2us/file, 5...5us) 
+ReadFiles 1254ms (4us/file, 8...6us) 
+DeleteFiles 3871ms (14us/file, 17...11us) 
+
+Generating files data, 262144 files of 2048 bytes... Done
+CreateWriteFiles 4367ms (16us/file, 22...16us) 
+Space free: 90960.0 Mb
+Space used: 1051.8 Mb
+AccessFiles 599ms (2us/file, 3...3us) 
+ReadFiles 1262ms (4us/file, 6...6us) 
+DeleteFiles 3388ms (12us/file, 29...9us)
+
+Generating files data, 524288 files of 2048 bytes... Done
+CreateWriteFiles 10097ms (19us/file, 19...19us) 
+Space free: 91476.2 Mb
+Space used: 2102.0 Mb
+AccessFiles 1256ms (2us/file, 4...4us) 
+ReadFiles 2730ms (5us/file, 17...14us) 
+DeleteFiles 8725ms (16us/file, 28...11us) 
+
+Generating files data, 524288 files of 1024 bytes... Done
+CreateWriteFiles 9133ms (17us/file, 31...16us) 
+Space free: 90960.0 Mb
+Space used: 2102.1 Mb
+AccessFiles 1245ms (2us/file, 3...4us) 
+ReadFiles 2573ms (4us/file, 7...5us) 
+DeleteFiles 7798ms (14us/file, 22...9us) 
+
+Generating files data, 1048576 files of 1024 bytes... Done
+CreateWriteFiles 20634ms (19us/file, 19...20us) 
+Space free: 91476.2 Mb
+Space used: 4202.4 Mb
+AccessFiles 5259ms (5us/file, 8...5us) 
+ReadFiles 83463ms (79us/file, 63...78us) 
+DeleteFiles 17490ms (16us/file, 214...14us) 
+
+Generating files data, 1048576 files of 512 bytes... Done
+CreateWriteFiles 19837ms (18us/file, 65...18us) 
+Space free: 90960.0 Mb
+Space used: 4202.4 Mb
+AccessFiles 2442ms (2us/file, 4...4us) 
+ReadFiles 5281ms (5us/file, 5...5us) 
+DeleteFiles 17722ms (16us/file, 27...10us) 
+
+Generating files data, 1048576 files of 512 bytes... Done
+CreateWriteFiles 19277ms (18us/file, 15...16us) 
+Space free: 90960.0 Mb
+Space used: 4202.4 Mb
+AccessFiles 2570ms (2us/file, 21...3us) 
+ReadFiles 49242ms (46us/file, 68...4us) 
+DeleteFiles 16993ms (16us/file, 43...13us) 
+
+Generating files data, 2097152 files of 512 bytes... Done
+CreateWriteFiles 55740ms (26us/file, 19...25us) 
+Space free: 91476.2 Mb
+Space used: 8403.5 Mb
+AccessFiles 16667ms (7us/file, 14...9us) 
+ReadFiles 215150ms (102us/file, 194...68us) 
+DeleteFiles 54243ms (25us/file, 20...13us) 
+
+
+
+#define DIR_STRUCT_SIZE_XX_YY		2
+
+Generating files data, 32768 files of 16384 bytes... Done
+CreateWriteFiles 724ms (22us/file, 24...53us) 
+Space free: 90859.5 Mb
+Space used: 512.0 Mb
+AccessFiles 91ms (2us/file, 4...4us) 
+ReadFiles 226ms (6us/file, 11...7us) 
+DeleteFiles 813ms (24us/file, 15...12us) 
+
+Generating files data, 65536 files of 16384 bytes... Done
+CreateWriteFiles 1916ms (29us/file, 23...24us) 
+Space free: 90797.9 Mb
+Space used: 1024.0 Mb
+AccessFiles 193ms (2us/file, 3...5us) 
+ReadFiles 454ms (6us/file, 36...8us) 
+DeleteFiles 1984ms (30us/file, 23...11us)
+
+Generating files data, 65536 files of 8192 bytes... Done
+CreateWriteFiles 1569ms (23us/file, 27...16us) 
+Space free: 90797.8 Mb
+Space used: 512.0 Mb
+AccessFiles 167ms (2us/file, 3...3us) 
+ReadFiles 385ms (5us/file, 7...7us) 
+DeleteFiles 1788ms (27us/file, 22...11us) 
+
+Generating files data, 131072 files of 8192 bytes... Done
+CreateWriteFiles 3693ms (28us/file, 29...19us) 
+Space free: 90738.6 Mb
+Space used: 1024.0 Mb
+AccessFiles 345ms (2us/file, 5...5us) 
+ReadFiles 774ms (5us/file, 7...7us) 
+DeleteFiles 4549ms (34us/file, 16...11us) 
+
+Generating files data, 131072 files of 4096 bytes... Done
+CreateWriteFiles 2978ms (22us/file, 17...17us) 
+Space free: 90738.6 Mb
+Space used: 512.0 Mb
+AccessFiles 360ms (2us/file, 3...4us) 
+ReadFiles 661ms (5us/file, 76...5us) 
+DeleteFiles 4287ms (32us/file, 23...11us) 
+
+Generating files data, 262144 files of 4096 bytes... Done
+CreateWriteFiles 7775ms (29us/file, 14...19us) 
+Space free: 90708.5 Mb
+Space used: 1024.0 Mb
+AccessFiles 682ms (2us/file, 3...4us) 
+ReadFiles 1387ms (5us/file, 6...6us) 
+DeleteFiles 9705ms (37us/file, 22...11us) 
+
+Generating files data, 262144 files of 2048 bytes... Done
+CreateWriteFiles 8105ms (30us/file, 16...26us) 
+Space free: 90708.5 Mb
+Space used: 1024.0 Mb
+AccessFiles 687ms (2us/file, 4...4us) 
+ReadFiles 1357ms (5us/file, 7...7us) 
+DeleteFiles 9091ms (34us/file, 22...10us) 
+
+Generating files data, 524288 files of 2048 bytes... Done
+CreateWriteFiles 16628ms (31us/file, 27...18us) 
+Space free: 90704.1 Mb
+Space used: 2048.0 Mb
+AccessFiles 1405ms (2us/file, 4...3us) 
+ReadFiles 3211ms (6us/file, 7...6us) 
+DeleteFiles 19729ms (37us/file, 24...13us) 
+
+Generating files data, 524288 files of 1024 bytes... Done
+CreateWriteFiles 17642ms (33us/file, 17...16us) 
+Space free: 90704.2 Mb
+Space used: 2048.0 Mb
+AccessFiles 1363ms (2us/file, 3...3us) 
+ReadFiles 3194ms (6us/file, 6...5us) 
+DeleteFiles 19566ms (37us/file, 23...13us) 
+
+256^3 folders:
+Generating files data, 1048576 files of 1024 bytes... Done
+CreateWriteFiles 63579ms (60us/file, 18...143us) 
+Space free: 82639.1 Mb
+Space used: 4096.0 Mb
+AccessFiles 6153ms (5us/file, 14...6us) 
+ReadFiles 87219ms (83us/file, 460...62us) 
+DeleteFiles 43852ms (41us/file, 17...16us)
+
+Normal count of folders:
+Generating files data, 1048576 files of 1024 bytes... Done
+CreateWriteFiles 35859ms (34us/file, 21...15us) 
+Space free: 90704.1 Mb
+Space used: 4096.0 Mb
+AccessFiles 3917ms (3us/file, 5...4us) 
+ReadFiles 77922ms (74us/file, 69...60us) 
+DeleteFiles 35802ms (34us/file, 13...12us) 
+
+Generating files data, 1048576 files of 512 bytes... Done
+CreateWriteFiles 36413ms (34us/file, 17...18us) 
+Space free: 90704.1 Mb
+Space used: 4096.0 Mb
+AccessFiles 3139ms (2us/file, 10...4us) 
+ReadFiles 75832ms (72us/file, 74...62us) 
+DeleteFiles 37962ms (36us/file, 16...13us) 
+
+Generating files data, 2097152 files of 512 bytes... Done
+CreateWriteFiles 76202ms (36us/file, 19...26us) 
+Space free: 90704.1 Mb
+Space used: 8192.0 Mb
+AccessFiles 14652ms (6us/file, 7...8us) 
+ReadFiles 157217ms (74us/file, 75...66us) 
+DeleteFiles 73189ms (34us/file, 41...13us) 
+
+
+#define DIR_STRUCT_SIZE_XXX_YYY		3
+corrupts os load
+very slow delete
+
+
+#define DIR_STRUCT_SIZE_XXXX_YYYY	4
+corrupts os load
+very slow delete
