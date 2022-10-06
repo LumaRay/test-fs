@@ -14,12 +14,15 @@
 //#define DIR_STRUCT_SIZE_XXX_YYY		3
 //#define DIR_STRUCT_SIZE_XXXX_YYYY	4
 
-//#define DIR_STRUCT_SIZE 			DIR_STRUCT_SIZE_NO
+#define DIR_STRUCT_SIZE 			DIR_STRUCT_SIZE_NO
 //#define DIR_STRUCT_SIZE 			DIR_STRUCT_SIZE_X_Y
-#define DIR_STRUCT_SIZE 			DIR_STRUCT_SIZE_XX_YY
+//#define DIR_STRUCT_SIZE 			DIR_STRUCT_SIZE_XX_YY
 
-#define FILES_PATH_PREFIX			"/tmp/hashes/"
-#define FILES_PATH_PREFIX_SIZE		12
+//#define FILES_PATH_PREFIX			"/tmp/hashes/"
+//#define FILES_PATH_PREFIX_SIZE		12
+#define FILES_PATH_PREFIX			"/tmp/fusehashes/"
+#define FILES_PATH_PREFIX_SIZE		16
+
 #if (DIR_STRUCT_SIZE != DIR_STRUCT_SIZE_NO)
 #	define FILES_PATH_SIZE 			(FILES_PATH_PREFIX_SIZE + (DIR_STRUCT_SIZE+1)*2)
 #else
@@ -28,8 +31,24 @@
 
 #define FILE_NAME_SIZE				64
 
+//#define FILES_COUNT		1
+//#define FILES_COUNT		16
+//#define FILES_COUNT		(16 * 1024)
+//#define FILE_SIZE		1
+#define FILE_SIZE		(4 * 1024)
+
 //#define FILES_COUNT		(16 * 1024)
 //#define FILE_SIZE		(16 * 1024)
+
+//#define FILES_COUNT		(32 * 1024)
+//#define FILES_COUNT		(64 * 1024)
+//#define FILES_COUNT		(128 * 1024)
+//#define FILES_COUNT		(256 * 1024)
+//#define FILES_COUNT		(512 * 1024)
+//#define FILES_COUNT		(1024 * 1024)
+#define FILES_COUNT		(2048 * 1024)
+//#define FILES_COUNT		(4096 * 1024)
+
 
 
 
@@ -66,8 +85,8 @@
 //#define  FILES_COUNT		(1024 * 1024)
 //#define  FILE_SIZE		(512)
 
-#define FILES_COUNT		(2048 * 1024)
-#define FILE_SIZE		(512)
+//#define FILES_COUNT		(2048 * 1024)
+//#define FILE_SIZE		(512)
 
 
 //#define FILES_COUNT		(2048 * 1024)
@@ -148,7 +167,7 @@ void CreateWriteFiles()
 			stat_start_last = clock();
 		f = fopen((*filesData)[idxFile].pathName, "w");
 		fwrite((*filesData)[idxFile].data, FILE_SIZE, 1, f);
-		fflush(f);
+		//fflush(f);
 		fclose(f);
 		if (idxFile == 1)
 			stat_end_first = clock();
@@ -169,7 +188,7 @@ void AccessFiles()
 		f = fopen((*filesData)[idxFile].pathName, "r");
 		if (!f)
 			exit(-1);
-		fflush(f);
+		//fflush(f);
 		fclose(f);
 		if (idxFile == 1)
 			stat_end_first = clock();
@@ -195,7 +214,7 @@ void ReadFiles()
 		ret = fread(buf, 1, FILE_SIZE, f);
 		if (!ret)
 			exit(-1);
-		fflush(f);
+		//fflush(f);
 		fclose(f);
 		if (idxFile == 1)
 			stat_end_first = clock();
@@ -282,7 +301,7 @@ int main()
 	ftime(&end);
 	PrintTimeStats("CreateWriteFiles", TimeDelta(&start, &end));
 
-	ret = statvfs(FILES_PATH_PREFIX, &stat1);
+	ret = statvfs("/tmp/", &stat1);
 	printf("Space free: %5.1f Mb\n", (float)stat0.f_bsize * stat0.f_bfree / (1024 * 1024));
 	printf("Space used: %5.1f Mb\n", ((float)stat0.f_bsize * stat0.f_bfree - (float)stat1.f_bsize * stat1.f_bfree) / (1024 * 1024));
 
@@ -304,3 +323,4 @@ int main()
 
 	return 0;
 }
+

@@ -1,3 +1,4 @@
+// apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/3bf863cc.pub
 // sudo apt-get update && sudo apt-get install -y libfuse-dev
 // sudo apt-get install -y pkg-config
 // https://engineering.facile.it/blog/eng/write-filesystem-fuse/
@@ -7,7 +8,8 @@
 // fusermount -u /tmp/fusehashes
 // echo -n "" > /tmp/abc.bin
 
-#define FUSE_USE_VERSION 26
+//#define FUSE_USE_VERSION 26
+#define FUSE_USE_VERSION 29
 
 #include <fuse.h>
 #include <string.h>
@@ -302,6 +304,8 @@ static struct fuse_operations fuse_example_operations = {
   //.release = release_callback,
 };
 
+//static char fbuff[1024];
+
 int main(int argc, char *argv[])
 {
   int res;
@@ -314,6 +318,8 @@ int main(int argc, char *argv[])
   positions_count = 0;
 
   fbin_file = fopen(BIN_FILE, "a+");//"r+");
+  //setvbuf(fbin_file, fbuff, _IOFBF, sizeof(fbuff));
+  //setvbuf(fbin_file, NULL, _IONBF, 0);
   res = fuse_main(argc, argv, &fuse_example_operations, NULL);
   fclose(fbin_file);
 
