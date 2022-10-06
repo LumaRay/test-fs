@@ -349,3 +349,27 @@ very slow delete
 #define DIR_STRUCT_SIZE_XXXX_YYYY	4
 corrupts os load
 very slow delete
+
+
+
+With FUSE:
+
+With extra fflush
+
+Generating files data, 16384 files of 4096 bytes... Done
+CreateWriteFiles 7780ms (474us/file, 407...265us) 
+Space free:   0.0 Mb
+Space used: -90869.9 Mb
+AccessFiles 3929ms (239us/file, 707...134us) 
+ReadFiles 7336ms (447us/file, 819...260us) 
+###DeleteFiles 1546ms (94us/file, 91...53us) 
+
+Without extra fflush
+
+Generating files data, 16384 files of 4096 bytes... Done
+CreateWriteFiles 7272ms (443us/file, 290...273us) 
+Space free:   0.0 Mb
+Space used: -90869.9 Mb
+AccessFiles 3960ms (241us/file, 128...115us) 
+ReadFiles 7394ms (451us/file, 227...303us) 
+###DeleteFiles 1523ms (92us/file, 102...50us) 
