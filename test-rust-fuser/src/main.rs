@@ -1,12 +1,9 @@
+// sudo apt-get install -y pkg-config fuse fuse3 libfuse-dev
 use clap::{crate_version, Arg, Command};
-/*use fuser::{
-    FileAttr, FileType, Filesystem, MountOption, ReplyAttr, ReplyData, ReplyDirectory, ReplyEntry,
-    Request,
-};*/
 use fuser::{
-    Filesystem, KernelConfig, MountOption, ReplyAttr, ReplyCreate, ReplyData, ReplyDirectory,
-    ReplyEmpty, ReplyEntry, ReplyOpen, ReplyStatfs, ReplyWrite, ReplyXattr, Request, TimeOrNow,
-    FUSE_ROOT_ID,
+    FileAttr, FileType, Filesystem, MountOption, ReplyAttr, ReplyData, ReplyDirectory, ReplyEntry,
+    Request, KernelConfig, ReplyCreate, ReplyEmpty, ReplyOpen, ReplyStatfs, ReplyWrite, ReplyXattr, 
+    TimeOrNow, FUSE_ROOT_ID,
 };
 use libc::ENOENT;
 use std::ffi::OsStr;
@@ -19,7 +16,6 @@ use std::os::unix::ffi::OsStrExt;
 use std::fs::{File, OpenOptions};
 
 use std::collections::BTreeMap;
-
 
 const TTL: Duration = Duration::from_secs(1); // 1 second
 
@@ -76,10 +72,10 @@ impl Filesystem for HelloFS {
         reply: ReplyCreate,
     ) {
         debug!("create() called with {:?} {:?}", parent, name);
-        if self.lookup_name(parent, name).is_ok() {
-            reply.error(libc::EEXIST);
-            return;
-        }
+        // if hlp.lookup_name(parent, name).is_ok() {
+        //     reply.error(libc::EEXIST);
+        //     return;
+        // }
 
         let (read, write) = match flags & libc::O_ACCMODE {
             libc::O_RDONLY => (true, false),
@@ -92,70 +88,70 @@ impl Filesystem for HelloFS {
             }
         };
 
-        let mut parent_attrs = match self.get_inode(parent) {
-            Ok(attrs) => attrs,
-            Err(error_code) => {
-                reply.error(error_code);
-                return;
-            }
-        };
+        // let mut parent_attrs = match self.get_inode(parent) {
+        //     Ok(attrs) => attrs,
+        //     Err(error_code) => {
+        //         reply.error(error_code);
+        //         return;
+        //     }
+        // };
 
-        if !check_access(
-            parent_attrs.uid,
-            parent_attrs.gid,
-            parent_attrs.mode,
-            req.uid(),
-            req.gid(),
-            libc::W_OK,
-        ) {
-            reply.error(libc::EACCES);
-            return;
-        }
-        parent_attrs.last_modified = time_now();
-        parent_attrs.last_metadata_changed = time_now();
-        self.write_inode(&parent_attrs);
+        // if !check_access(
+        //     parent_attrs.uid,
+        //     parent_attrs.gid,
+        //     parent_attrs.mode,
+        //     req.uid(),
+        //     req.gid(),
+        //     libc::W_OK,
+        // ) {
+        //     reply.error(libc::EACCES);
+        //     return;
+        // }
+        // parent_attrs.last_modified = time_now();
+        // parent_attrs.last_metadata_changed = time_now();
+        // self.write_inode(&parent_attrs);
 
         if req.uid() != 0 {
             mode &= !(libc::S_ISUID | libc::S_ISGID) as u32;
         }
 
-        let inode = self.allocate_next_inode();
-        let attrs = InodeAttributes {
-            inode,
-            open_file_handles: 1,
-            size: 0,
-            last_accessed: time_now(),
-            last_modified: time_now(),
-            last_metadata_changed: time_now(),
-            kind: as_file_kind(mode),
-            mode: self.creation_mode(mode),
-            hardlinks: 1,
-            uid: req.uid(),
-            gid: creation_gid(&parent_attrs, req.gid()),
-            xattrs: Default::default(),
-        };
-        self.write_inode(&attrs);
-        File::create(self.content_path(inode)).unwrap();
+        // let inode = self.allocate_next_inode();
+        // let attrs = InodeAttributes {
+        //     inode,
+        //     open_file_handles: 1,
+        //     size: 0,
+        //     last_accessed: time_now(),
+        //     last_modified: time_now(),
+        //     last_metadata_changed: time_now(),
+        //     kind: as_file_kind(mode),
+        //     mode: self.creation_mode(mode),
+        //     hardlinks: 1,
+        //     uid: req.uid(),
+        //     gid: creation_gid(&parent_attrs, req.gid()),
+        //     xattrs: Default::default(),
+        // };
+        // self.write_inode(&attrs);
+        // File::create(self.content_path(inode)).unwrap();
 
-        if as_file_kind(mode) == FileKind::Directory {
-            let mut entries = BTreeMap::new();
-            entries.insert(b".".to_vec(), (inode, FileKind::Directory));
-            entries.insert(b"..".to_vec(), (parent, FileKind::Directory));
-            self.write_directory_content(inode, entries);
-        }
+        // if as_file_kind(mode) == FileKind::Directory {
+        //     let mut entries = BTreeMap::new();
+        //     entries.insert(b".".to_vec(), (inode, FileKind::Directory));
+        //     entries.insert(b"..".to_vec(), (parent, FileKind::Directory));
+        //     self.write_directory_content(inode, entries);
+        // }
 
-        let mut entries = self.get_directory_content(parent).unwrap();
-        entries.insert(name.as_bytes().to_vec(), (inode, attrs.kind));
-        self.write_directory_content(parent, entries);
+        // let mut entries = self.get_directory_content(parent).unwrap();
+        // entries.insert(name.as_bytes().to_vec(), (inode, attrs.kind));
+        // self.write_directory_content(parent, entries);
 
         // TODO: implement flags
-        reply.created(
-            &Duration::new(0, 0),
-            &attrs.into(),
-            0,
-            self.allocate_next_file_handle(read, write),
-            0,
-        );
+        // reply.created(
+        //     &Duration::new(0, 0),
+        //     &attrs.into(),
+        //     0,
+        //     self.allocate_next_file_handle(read, write),
+        //     0,
+        // );
     }
 
     fn lookup(&mut self, _req: &Request, parent: u64, name: &OsStr, reply: ReplyEntry) {
